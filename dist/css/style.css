@@ -1,0 +1,215 @@
+/* 
+color
+#F4E5E8
+ #C4B8C7
+  #816087 
+  #362A44
+  B4665B  */
+
+/* text heading  darkpurple */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --lightWhite: #f4e5e8;
+  --lightpurple: #c4b8c7;
+  --purple: #816087;
+  --darkpurple: #362a44;
+  --darkSalmon: #b4665b;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  grid-template-columns: 100%;
+  background-image: linear-gradient(
+    -180deg,
+    #fff 50%,
+    #fff 50%,
+    #faedef 50% 100%
+  );
+  list-style: none;
+}
+
+header {
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+  margin: 0.5rem 0;
+}
+nav {
+  display: flex;
+  align-items: center;
+  text-transform: capitalize;
+}
+nav li {
+  padding-right: 2rem;
+}
+nav li a {
+  text-decoration: none;
+  color: var(--darkPurple);
+}
+nav li a:hover {
+  text-decoration: none;
+  color: var(--lightpurple);
+}
+
+input[value="login"] {
+  background-color: var(--darkpurple);
+  color: var(--lightWhite);
+  padding: 0.75rem 1.5rem;
+  border-radius: 1rem;
+  font-size: 1rem;
+  text-transform: capitalize;
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);
+  border: 0.15rem solid var(--blue);
+  transition: all 0.3s linear;
+}
+/* COLOR */
+h1 {
+  color: var(--darkpurple);
+  margin: 1.5rem 0.75rem;
+}
+
+p {
+  color: var(--purple);
+}
+/* CONTAINER */
+
+.container {
+  grid-template-columns: 1fr;
+  text-align: center;
+}
+/* TEMPLATE SECTION */
+.template__buyer,
+.template__seller {
+  padding: 0.75rem;
+  font-size: 1rem;
+}
+
+.template__buyer {
+  background-color: #faedef;
+}
+
+/* BUTTON */
+
+.template__seller-btn {
+  color: #fff;
+  background-color: var(--purple);
+}
+.template__buyer-btn {
+  color: var(--purple);
+  background-color: #fff;
+}
+
+.template__buyer-btn,
+.template__seller-btn {
+  width: 100%;
+  margin: 1rem auto;
+  padding: 0.75rem;
+  font-size: 1rem;
+  border-radius: 1rem;
+  text-transform: capitalize;
+  border: 0.15rem solid var(--blue);
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);
+  transition: all 0.3s linear;
+  outline: none;
+}
+
+.template__buyer-btn:hover {
+  background: var(--darkpurple);
+  color: var(--lightWhite);
+}
+.template__seller-btn:hover {
+  background: var(--darkpurple);
+  color: var(--lightWhite);
+}
+input[value="login"]:hover {
+  transform: scale(1.1);
+}
+
+/* section .wave {
+  position: absolute;
+  width: 100%;
+  height: 143px;
+  bottom: 0;
+  left: 0;
+  background: url(wave.png);
+  animation: animate 10s linear infinite;
+}
+section .wave:before {
+  content: "";
+  width: 100%;
+  height: 143px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: url(wave.png);
+  opacity: 0.4;
+  animation: animate-reverse 10s linear infinite;
+}
+section .wave:after {
+  content: "";
+  width: 100%;
+  height: 143px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: url(wave.png);
+  opacity: 0.6;
+  animation-delay: -5s;
+  animation: animate 20s linear infinite;
+}
+
+@keyframes animate {
+  0% {
+    background-position: 0;
+  }
+  100% {
+    background-position: 1360px;
+  }
+}
+@keyframes animate-reverse {
+  0% {
+    background-position: 1360px;
+  }
+  100% {
+    background-position: 0;
+  }
+} */
+
+@media screen and (min-width: 768px) {
+  .container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-top: 3rem;
+  }
+
+  body {
+    display: grid;
+    grid-template-columns: 85%;
+    justify-content: center;
+
+    background-image: linear-gradient(
+      90deg,
+      #fff 50%,
+      #faedef 50%,
+      #faedef 100%
+    );
+  }
+  header {
+    width: 100%;
+  }
+
+  .template__buyer-btn,
+  .template__seller-btn {
+    width: 50%;
+  }
+}
